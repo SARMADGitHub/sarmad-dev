@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
-  Github, Linkedin, Mail, Phone, Download, ExternalLink, ArrowUp, ArrowRight,
+  Github, Linkedin, Mail, Phone, Download, ArrowUp, ArrowRight,
   Code2, Cpu, Database, Wrench, Users, GraduationCap, Award, Trophy,
   Briefcase, Send, MapPin, Sparkles, Moon, Sun, FileText, Rocket,
 } from "lucide-react";
