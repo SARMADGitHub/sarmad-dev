@@ -266,11 +266,12 @@ function Hero() {
             <div className="absolute inset-0 rounded-full border border-border/60" />
             <div className="absolute inset-4 rounded-full border border-primary/30" style={{ animation: "spin 22s linear infinite" }} />
             <div className="absolute inset-10 rounded-full border border-accent/30" style={{ animation: "spin 32s linear infinite reverse" }} />
-            <div className="relative grid h-52 w-52 place-items-center rounded-full bg-gradient-to-br from-primary via-primary-glow to-accent text-primary-foreground shadow-2xl sm:h-64 sm:w-64">
-              <div className="text-center">
-                <div className="font-display text-5xl font-bold">SL</div>
-                <div className="mt-1 font-mono text-xs opacity-80">&lt;CS Student /&gt;</div>
-              </div>
+            <div className="relative grid h-52 w-52 place-items-center overflow-hidden rounded-full bg-gradient-to-br from-primary via-primary-glow to-accent p-1 shadow-2xl sm:h-64 sm:w-64">
+              <img
+                src={profileAsset.url}
+                alt="Sarmad Laghari"
+                className="h-full w-full rounded-full object-cover"
+              />
             </div>
             {[Code2, Cpu, Database, Wrench].map((Icon, i) => {
               const angle = (i / 4) * Math.PI * 2;
