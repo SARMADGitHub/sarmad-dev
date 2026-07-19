@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
-  Github, Linkedin, Mail, Phone, Download, ExternalLink, ArrowUp, ArrowRight,
+  Github, Linkedin, Mail, Phone, Download, ArrowUp, ArrowRight,
   Code2, Cpu, Database, Wrench, Users, GraduationCap, Award, Trophy,
   Briefcase, Send, MapPin, Sparkles, Moon, Sun, FileText, Rocket,
 } from "lucide-react";
-import profileAsset from "@/assets/sarmad-profile.jpg.asset.json";
+import profileAsset from "@/assets/sarmad-profile-2.jpg.asset.json";
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -529,11 +529,8 @@ function Projects() {
                 ))}
               </div>
               <div className="mt-5 flex gap-2">
-                <a href="#" className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card/50 px-3 py-2 text-xs font-medium transition-colors hover:bg-secondary">
+                <a href="https://github.com/SARMADGitHub" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card/50 px-3 py-2 text-xs font-medium transition-colors hover:bg-secondary">
                   <Github className="h-3.5 w-3.5" /> GitHub
-                </a>
-                <a href="#" className="btn-primary inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-medium">
-                  <ExternalLink className="h-3.5 w-3.5" /> Live Demo
                 </a>
               </div>
             </div>
