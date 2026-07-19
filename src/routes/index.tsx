@@ -220,7 +220,7 @@ function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
-            Available for internships
+            Available for remote internships
           </div>
           <h1 className="text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl">
             Hi, I'm <span className="text-gradient">Sarmad Laghari</span>
@@ -234,7 +234,7 @@ function Hero() {
             Computer Science student at Sukkur IBA University passionate about
             <span className="text-foreground"> AI</span>,
             <span className="text-foreground"> Data Science</span>, and
-            <span className="text-foreground"> Web Development</span>. I build practical, real-world projects and earn industry certifications while looking for meaningful internship opportunities.
+            <span className="text-foreground"> Web Development</span>. I build practical, real-world projects and earn industry certifications while looking for meaningful remote internship opportunities.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#resume" className="btn-primary inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold">
@@ -249,9 +249,9 @@ function Hero() {
           </div>
           <div className="mt-8 flex items-center gap-3">
             {[
-              { Icon: Github, href: "https://github.com" },
-              { Icon: Linkedin, href: "https://linkedin.com" },
-              { Icon: Mail, href: "mailto:sarmad@example.com" },
+              { Icon: Github, href: "https://github.com/SARMADGitHub" },
+              { Icon: Linkedin, href: "https://www.linkedin.com/in/sarmad-laghari-760049317" },
+              { Icon: Mail, href: "mailto:sarmadlaghari05@gmail.com" },
             ].map(({ Icon, href }, i) => (
               <a key={i} href={href} target="_blank" rel="noreferrer" className="group grid h-10 w-10 place-items-center rounded-xl border border-border bg-card/60 transition-all hover:-translate-y-0.5 hover:border-primary hover:text-primary">
                 <Icon className="h-4 w-4" />
@@ -322,7 +322,7 @@ function About() {
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             My goal is to become a skilled software engineer and contribute to innovative
-            technology solutions. I'm currently open to <span className="text-primary font-medium">internship opportunities</span>
+            technology solutions. I'm currently open to <span className="text-primary font-medium">remote internship opportunities</span>
             &nbsp;where I can apply my knowledge and grow.
           </p>
           <div className="mt-6 flex flex-wrap gap-2 text-xs">
@@ -654,10 +654,10 @@ function Contact() {
   const [sent, setSent] = useState(false);
   const onSubmit = (e: FormEvent) => { e.preventDefault(); setSent(true); setTimeout(() => setSent(false), 3000); };
   const items = [
-    { Icon: Mail, label: "Email", value: "sarmad.laghari@example.com", href: "mailto:sarmad.laghari@example.com" },
-    { Icon: Phone, label: "Phone", value: "+92 300 0000000", href: "tel:+923000000000" },
-    { Icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/sarmad", href: "https://linkedin.com" },
-    { Icon: Github, label: "GitHub", value: "github.com/sarmad", href: "https://github.com" },
+    { Icon: Mail, label: "Email", value: "sarmadlaghari05@gmail.com", href: "mailto:sarmadlaghari05@gmail.com" },
+    { Icon: Phone, label: "Phone", value: "+92 3092585018", href: "tel:+923092585018" },
+    { Icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/sarmad-laghari-760049317", href: "https://www.linkedin.com/in/sarmad-laghari-760049317" },
+    { Icon: Github, label: "GitHub", value: "github.com/SARMADGitHub", href: "https://github.com/SARMADGitHub" },
   ];
   return (
     <Section id="contact" eyebrow="Contact" title="Let's Connect">
@@ -734,8 +734,12 @@ function Footer() {
         <div>
           <div className="text-sm font-semibold">Connect</div>
           <div className="mt-3 flex gap-2">
-            {[Github, Linkedin, Mail].map((Icon, i) => (
-              <a key={i} href="#" className="grid h-9 w-9 place-items-center rounded-xl border border-border bg-card/60 transition-all hover:-translate-y-0.5 hover:border-primary hover:text-primary">
+            {[
+              { Icon: Github, href: "https://github.com/SARMADGitHub" },
+              { Icon: Linkedin, href: "https://www.linkedin.com/in/sarmad-laghari-760049317" },
+              { Icon: Mail, href: "mailto:sarmadlaghari05@gmail.com" },
+            ].map(({ Icon, href }, i) => (
+              <a key={i} href={href} target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-xl border border-border bg-card/60 transition-all hover:-translate-y-0.5 hover:border-primary hover:text-primary">
                 <Icon className="h-4 w-4" />
               </a>
             ))}
