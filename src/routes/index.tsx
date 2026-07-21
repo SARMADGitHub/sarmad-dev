@@ -5,7 +5,7 @@ import {
   Code2, Cpu, Database, Wrench, Users, GraduationCap, Award, Trophy,
   Briefcase, Send, MapPin, Sparkles, Moon, Sun, FileText, Rocket,
 } from "lucide-react";
-import profileAsset from "@/assets/sarmad-profile-2.jpg.asset.json";
+
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -268,7 +268,7 @@ function Hero() {
             <div className="absolute inset-10 rounded-full border border-accent/30" style={{ animation: "spin 32s linear infinite reverse" }} />
             <div className="relative grid h-52 w-52 place-items-center overflow-hidden rounded-full bg-gradient-to-br from-primary via-primary-glow to-accent p-1 shadow-2xl sm:h-64 sm:w-64">
               <img
-                src={profileAsset.url}
+                src="https://ibb.co/4RxmYCCx"
                 alt="Sarmad Laghari"
                 className="h-full w-full rounded-full object-cover"
               />
