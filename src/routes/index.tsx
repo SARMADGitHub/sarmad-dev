@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import profileAsset from "@/assets/sarmad-profile-3.jpg.asset.json";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   Github, Linkedin, Mail, Phone, Download, ArrowUp, ArrowRight,
@@ -268,7 +269,7 @@ function Hero() {
             <div className="absolute inset-10 rounded-full border border-accent/30" style={{ animation: "spin 32s linear infinite reverse" }} />
             <div className="relative grid h-52 w-52 place-items-center overflow-hidden rounded-full bg-gradient-to-br from-primary via-primary-glow to-accent p-1 shadow-2xl sm:h-64 sm:w-64">
               <img
-                src="https://ibb.co/4RxmYCCx"
+                src={profileAsset.url}
                 alt="Sarmad Laghari"
                 className="h-full w-full rounded-full object-cover"
               />
