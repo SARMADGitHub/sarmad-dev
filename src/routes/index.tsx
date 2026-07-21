@@ -5,7 +5,7 @@ import {
   Code2, Cpu, Database, Wrench, Users, GraduationCap, Award, Trophy,
   Briefcase, Send, MapPin, Sparkles, Moon, Sun, FileText, Rocket,
 } from "lucide-react";
-import profileAsset from "@/assets/sarmad-profile-2.jpg.asset.json";
+
 
 export const Route = createFileRoute("/")({ component: Index });
 
