@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import profileAsset from "@/assets/sarmad-profile-4.jpg.asset.json";
+import profileAsset from "@/assets/sarmad-profile-5.jpg.asset.json";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   Github, Linkedin, Mail, Phone, Download, ArrowUp, ArrowRight,
@@ -268,13 +268,12 @@ function Hero() {
             <div className="absolute inset-4 rounded-full border border-primary/30" style={{ animation: "spin 22s linear infinite" }} />
             <div className="absolute inset-10 rounded-full border border-accent/30" style={{ animation: "spin 32s linear infinite reverse" }} />
             <div className="relative h-52 w-52 overflow-hidden rounded-full bg-gradient-to-br from-primary via-primary-glow to-accent p-1 shadow-2xl sm:h-64 sm:w-64">
-              <img
-                src={profileAsset.url}
-                alt="Sarmad Laghari"
-                loading="eager"
-                decoding="async"
-                className="block h-full w-full rounded-full object-cover"
-              />
+              <div className="flex h-full w-full flex-col items-center justify-center rounded-full bg-background text-center">
+                <div className="font-display text-6xl font-bold text-gradient sm:text-7xl">CS</div>
+                <div className="mt-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground sm:text-xs">
+                  Computer Science
+                </div>
+              </div>
             </div>
 
             {[Code2, Cpu, Database, Wrench].map((Icon, i) => {
@@ -317,6 +316,24 @@ function About() {
   return (
     <Section id="about" eyebrow="About" title="Who I Am">
       <div className="grid gap-8 md:grid-cols-5">
+        <div data-reveal className="relative md:col-span-2">
+          <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-primary via-primary-glow to-accent opacity-30 blur-2xl" />
+          <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-primary/40 via-primary-glow/30 to-accent/40 p-[2px] shadow-2xl">
+            <img
+              src={profileAsset.url}
+              alt="Sarmad Laghari"
+              loading="eager"
+              decoding="async"
+              className="block h-full w-full rounded-[calc(1.5rem-2px)] object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-4 left-4 right-4 rounded-2xl border border-border bg-card/90 px-4 py-3 backdrop-blur-md shadow-xl">
+            <div className="flex items-center gap-2 text-xs">
+              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-foreground font-medium">Available for remote internships</span>
+            </div>
+          </div>
+        </div>
         <div data-reveal className="glass md:col-span-3 rounded-2xl p-8">
           <p className="text-base leading-relaxed text-muted-foreground">
             I'm a Computer Science student passionate about <span className="text-foreground font-medium">Artificial Intelligence</span>,
@@ -336,16 +353,16 @@ function About() {
               <span key={t} className="rounded-full border border-border bg-secondary px-3 py-1">{t}</span>
             ))}
           </div>
-        </div>
-        <div data-reveal className="grid md:col-span-2 grid-cols-2 gap-4">
-          {stats.map((s) => (
-            <div key={s.label} className="glass rounded-2xl p-5 text-center">
-              <div className="text-3xl font-bold text-gradient">
-                <Counter to={s.value} suffix={s.suffix} />
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {stats.map((s) => (
+              <div key={s.label} className="rounded-xl border border-border bg-background/40 p-3 text-center">
+                <div className="text-2xl font-bold text-gradient">
+                  <Counter to={s.value} suffix={s.suffix} />
+                </div>
+                <div className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">{s.label}</div>
               </div>
-              <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">{s.label}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </Section>
