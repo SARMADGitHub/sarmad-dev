@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import profileAsset from "@/assets/sarmad-profile-5.jpg.asset.json";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   Github, Linkedin, Mail, Phone, Download, ArrowUp, ArrowRight,
