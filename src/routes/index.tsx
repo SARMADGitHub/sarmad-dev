@@ -316,54 +316,34 @@ function About() {
   ];
   return (
     <Section id="about" eyebrow="About" title="Who I Am">
-      <div className="grid gap-8 md:grid-cols-5">
-        <div data-reveal className="relative md:col-span-2">
-          <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-primary via-primary-glow to-accent opacity-30 blur-2xl" />
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-primary/40 via-primary-glow/30 to-accent/40 p-[2px] shadow-2xl">
-            <img
-              src={profileAsset.url}
-              alt="Sarmad Laghari"
-              loading="eager"
-              decoding="async"
-              className="block h-full w-full rounded-[calc(1.5rem-2px)] object-cover"
-            />
-          </div>
-          <div className="absolute -bottom-4 left-4 right-4 rounded-2xl border border-border bg-card/90 px-4 py-3 backdrop-blur-md shadow-xl">
-            <div className="flex items-center gap-2 text-xs">
-              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-foreground font-medium">Available for remote internships</span>
-            </div>
-          </div>
+      <div data-reveal className="glass rounded-2xl p-8">
+        <p className="text-base leading-relaxed text-muted-foreground">
+          I'm a Computer Science student passionate about <span className="text-foreground font-medium">Artificial Intelligence</span>,
+          <span className="text-foreground font-medium"> Data Science</span>,
+          <span className="text-foreground font-medium"> Web Development</span>, and problem-solving.
+          I enjoy learning new technologies and building real-world projects. I continuously
+          improve my programming skills through practical development and professional
+          certifications.
+        </p>
+        <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+          My goal is to become a skilled software engineer and contribute to innovative
+          technology solutions. I'm currently open to <span className="text-primary font-medium">remote internship opportunities</span>
+          &nbsp;where I can apply my knowledge and grow.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-2 text-xs">
+          {["AI", "Data Science", "Web Dev", "Problem Solving", "Java", "Python"].map((t) => (
+            <span key={t} className="rounded-full border border-border bg-secondary px-3 py-1">{t}</span>
+          ))}
         </div>
-        <div data-reveal className="glass md:col-span-3 rounded-2xl p-8">
-          <p className="text-base leading-relaxed text-muted-foreground">
-            I'm a Computer Science student passionate about <span className="text-foreground font-medium">Artificial Intelligence</span>,
-            <span className="text-foreground font-medium"> Data Science</span>,
-            <span className="text-foreground font-medium"> Web Development</span>, and problem-solving.
-            I enjoy learning new technologies and building real-world projects. I continuously
-            improve my programming skills through practical development and professional
-            certifications.
-          </p>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            My goal is to become a skilled software engineer and contribute to innovative
-            technology solutions. I'm currently open to <span className="text-primary font-medium">remote internship opportunities</span>
-            &nbsp;where I can apply my knowledge and grow.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-2 text-xs">
-            {["AI", "Data Science", "Web Dev", "Problem Solving", "Java", "Python"].map((t) => (
-              <span key={t} className="rounded-full border border-border bg-secondary px-3 py-1">{t}</span>
-            ))}
-          </div>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.label} className="rounded-xl border border-border bg-background/40 p-3 text-center">
-                <div className="text-2xl font-bold text-gradient">
-                  <Counter to={s.value} suffix={s.suffix} />
-                </div>
-                <div className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">{s.label}</div>
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {stats.map((s) => (
+            <div key={s.label} className="rounded-xl border border-border bg-background/40 p-3 text-center">
+              <div className="text-2xl font-bold text-gradient">
+                <Counter to={s.value} suffix={s.suffix} />
               </div>
-            ))}
-          </div>
+              <div className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">{s.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </Section>
