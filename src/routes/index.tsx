@@ -261,19 +261,20 @@ function Hero() {
             ))}
           </div>
         </div>
-        <div className="relative mx-auto animate-fade-up" style={{ animationDelay: ".2s" }}>
-          <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-primary to-primary-glow opacity-30 blur-3xl animate-pulse-glow" />
-          <div className="relative grid h-72 w-72 place-items-center rounded-full glow-ring sm:h-96 sm:w-96">
+        <div className="relative mx-auto flex animate-fade-up items-center justify-center" style={{ animationDelay: ".2s" }}>
+          <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-primary to-primary-glow opacity-30 blur-3xl animate-pulse-glow" />
+          <div className="relative h-72 w-72 sm:h-96 sm:w-96">
             <div className="absolute inset-0 rounded-full border border-border/60" />
-            <div className="absolute inset-4 rounded-full border border-primary/30" style={{ animation: "spin 22s linear infinite" }} />
-            <div className="absolute inset-10 rounded-full border border-accent/30" style={{ animation: "spin 32s linear infinite reverse" }} />
-            <div className="relative h-52 w-52 overflow-hidden rounded-full bg-gradient-to-br from-primary via-primary-glow to-accent p-1 shadow-2xl sm:h-64 sm:w-64">
-              <div className="flex h-full w-full flex-col items-center justify-center rounded-full bg-background text-center">
-                <div className="font-display text-6xl font-bold text-gradient sm:text-7xl">CS</div>
-                <div className="mt-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground sm:text-xs">
-                  Computer Science
-                </div>
-              </div>
+            <div className="absolute inset-3 rounded-full border border-primary/30" style={{ animation: "spin 22s linear infinite" }} />
+            <div className="absolute inset-8 rounded-full border border-accent/30" style={{ animation: "spin 32s linear infinite reverse" }} />
+            <div className="relative h-full w-full overflow-hidden rounded-full bg-gradient-to-br from-primary via-primary-glow to-accent p-1.5 shadow-2xl">
+              <img
+                src={profileAsset.url}
+                alt="Sarmad Laghari"
+                loading="eager"
+                decoding="async"
+                className="h-full w-full rounded-full object-cover"
+              />
             </div>
 
             {[Code2, Cpu, Database, Wrench].map((Icon, i) => {
